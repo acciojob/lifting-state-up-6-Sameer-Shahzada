@@ -12,8 +12,10 @@ const App = () => {
   ]);
 
   const handleComplete = (index) => {
-    const updatedTodos = [...todos];
-    updatedTodos[index].completed = true;
+    const updatedTodos = todos.map((todo, i) =>
+      i === index ? { ...todo, completed: true } : todo
+    );
+
     setTodos(updatedTodos);
   };
 
