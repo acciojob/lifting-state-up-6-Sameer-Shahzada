@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const TodoList = ({ todos, handleComplete }) => {
   return (
@@ -11,7 +11,7 @@ const TodoList = ({ todos, handleComplete }) => {
             {todo.text}
 
             {!todo.completed && (
-              <button onClick={() => handleComplete(index)}>
+              <button onClick={handleComplete}>
                 Complete
               </button>
             )}
@@ -22,4 +22,4 @@ const TodoList = ({ todos, handleComplete }) => {
   );
 };
 
-export default TodoList
+export default TodoList;

@@ -11,10 +11,11 @@ const App = () => {
     { text: 'Deploy the React app', completed: false }
   ]);
 
-  const handleComplete = (index) => {
-    const updatedTodos = todos.map((todo, i) =>
-      i === index ? { ...todo, completed: true } : todo
-    );
+  const handleComplete = () => {
+    const updatedTodos = todos.map(todo => ({
+      ...todo,
+      completed: true
+    }));
 
     setTodos(updatedTodos);
   };
